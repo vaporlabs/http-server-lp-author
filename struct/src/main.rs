@@ -4,6 +4,8 @@ enum Lang {
   Spanish,
   Chinese,
   Texan,
+  Tagalog,
+  French,
 }
 
 struct Greeting {
@@ -22,6 +24,11 @@ fn main() {
   v.push(g);
   let g : Greeting = Greeting { lang: Lang::Chinese, message: String::from("WasmEdge 你好!") };
   v.push(g);
+  let g : Greeting = Greeting { lang: Lang::Tagalog, message: String::from("Kamusta na WasmEdge!") };
+  v.push(g);
+  let g : Greeting = Greeting { lang: Lang::French, message: String::from("Salut WasmEdge!") };
+  v.push(g);
+
 
   for e in v {
     println!("{:?} {}", e.lang, e.message);
